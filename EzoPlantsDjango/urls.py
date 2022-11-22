@@ -16,12 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from landing import views
-from orders import views
-from products import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('landing/', views.landing),
-    path('orders/', views.landing),
-    path('products/', views.landing),
 ]

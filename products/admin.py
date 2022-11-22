@@ -2,9 +2,19 @@ from django.contrib import admin
 from .models import *
 
 
-# class UserAdmin(admin.ModelAdmin):
-#     list_display = [field.name for field in User._meta.fields]
-#     list_filter = ['name']
-#     search_fields = ['name', 'email']
-#
-# admin.site.register(User, UserAdmin)
+class ProductAdmin(admin.ModelAdmin):
+    list_display = [field.name for field in Product._meta.fields]
+    class Meta:
+        model = Product
+
+
+admin.site.register(Product, ProductAdmin)
+
+
+class ProductImageAdmin(admin.ModelAdmin):
+    list_display = [field.name for field in ProductImage._meta.fields]
+    class Meta:
+        model = ProductImage
+
+
+admin.site.register(ProductImage, ProductImageAdmin)
