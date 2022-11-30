@@ -15,9 +15,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from landing import views
+from landing import views as landing_views
+from products import views as product_views
+from orders import views as order_views
+from django.conf import settings
+
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('landing/', views.landing),
-]
+    path('landing/', landing_views.landing),
+    path('', landing_views.home),
+    path(r'^product/(?P<product_id>\w+)/$', product_views.product, name='product'),
+    path(r'^basket_adding/$', order_views.basket_adding, name='basket_adding'),
+]\
+              + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) \
+              + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
