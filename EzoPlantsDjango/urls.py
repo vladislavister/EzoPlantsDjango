@@ -28,6 +28,7 @@ urlpatterns = [
     path('', landing_views.home),
     path(r'^product/(?P<product_id>\w+)/$', product_views.product, name='product'),
     path(r'^basket_adding/$', order_views.basket_adding, name='basket_adding'),
+    path(r'^checkout/$', order_views.checkout, name='checkout'),
 ]\
               + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) \
               + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
