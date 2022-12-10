@@ -1,6 +1,6 @@
 <!-- Static navbar -->
     <nav class="navbar navbar-default navbar-top">
-        df
+
     </nav>
     <nav class="navbar navbar-default navbar-main">
       <div class="container">
@@ -11,13 +11,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Project name</a>
+          <a class="navbar-brand" href="#">EzoPlants</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="/">Домой</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="/all_products/">Каталог</a></li>
+            <li><a href="/contacts/">Контакти</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
               <ul class="dropdown-menu">
@@ -64,3 +64,10 @@
         </div><!--/.nav-collapse -->
       </div>
     </nav>
+    <div>
+        {% if user.is_superuser %}
+            <h5>
+                <a href="{% url 'admin_orders' %}" target="_blank"> Дивитися усі закази </a>
+            </h5>
+        {% endif %}
+    </div>

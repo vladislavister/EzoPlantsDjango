@@ -43,7 +43,7 @@ html, body{
 }
 
 .product-item{
-    height: 360px;
+    height: 430px;
     background-color: white;
     border: 1px solid lightgrey;
     position: relative;
@@ -70,7 +70,7 @@ html, body{
 }
 
 .section-delivery{
-    height: 300px;
+    height: 700px;
     background-color: darkseagreen;
     text-align: center;
     color: white;
@@ -84,13 +84,13 @@ html, body{
 .navbar-top{
     min-height: 10px;
     height: 20px;
-    background-color: green;
+    background-color: darkseagreen;
     border: none;
     border-radius: 0;
 }
 
 .navbar-main{
-    background-color: #55e073;
+    background-color: #56B2801A;
     border: none;
     border-radius: 0;
 }

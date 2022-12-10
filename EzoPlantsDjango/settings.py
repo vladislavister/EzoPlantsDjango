@@ -41,7 +41,12 @@ INSTALLED_APPS = [
 
     'landing',
     'products',
-    'orders'
+    'orders',
+    'management_area',
+
+    #external packages
+
+    'django_summernote'
 ]
 
 MIDDLEWARE = [
@@ -69,7 +74,8 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
 
-                'orders.context_processors.getting_basket_info'
+                'orders.context_processors.getting_basket_info',
+                'management_area.context_processors.getting_privacy_policy'
             ],
         },
     },
