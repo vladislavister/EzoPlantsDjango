@@ -20,9 +20,12 @@
             {{ product_image.product.price }} UAH
         </div>
         <div class="add-to-card-btn">
-            <button class="btn btn-success">
-                Добавить в корзину
-            </button>
+            <a href="{% url 'product' product_image.product.id %}">
+                <button class="btn btn-success">
+                    Перейти на сторінку товару
+                </button>
+            </a>
+
         </div>
     </div>
 </div>

@@ -3,6 +3,7 @@ from .models import *
 from django.shortcuts import render
 from .forms import CheckoutContactForm
 from django.contrib.auth.models import User
+import sys
 
 
 def basket_adding(request):
@@ -45,7 +46,7 @@ def basket_adding(request):
 def checkout(request):
     session_key = request.session.session_key
     products_in_basket = ProductInBasket.objects.filter(session_key=session_key, is_active=True, order__isnull=True)
-    print (products_in_basket)
+    print(products_in_basket)
     for item in products_in_basket:
         print(item.order)
 
